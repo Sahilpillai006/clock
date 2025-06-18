@@ -12,22 +12,29 @@ body {
   align-items: center;
   height: 100vh;
   font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
 }
 
 .wrapper {
   text-align: center;
+  width: 100%;
 }
 
 .clock {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 2vw;
+  margin-bottom: 2vh;
+  flex-wrap: nowrap;
 }
 
 .digit-container {
-  width: 60px;
-  height: 60px;
+  width: 12vw;
+  height: 12vw;
+  max-width: 80px;
+  max-height: 80px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -43,23 +50,42 @@ body {
 }
 
 .numbers div {
-  height: 60px;
-  font-size: 42px;
+  height: 12vw;
+  max-height: 80px;
+  min-height: 40px;
+  font-size: 6vw;
+  max-font-size: 48px;
+  min-font-size: 20px;
   color: #fff;
   text-align: center;
-  line-height: 60px;
+  line-height: 12vw;
 }
 
 .separator {
-  width: 12px;
-  font-size: 42px;
+  width: 4vw;
+  font-size: 6vw;
   color: #fff;
   text-align: center;
-  line-height: 60px;
+  line-height: 12vw;
+}
+
+/* Optional: below adds better spacing on small screens */
+@media (max-width: 600px) {
+  .clock {
+    gap: 1vw;
+  }
+
+  .numbers div {
+    font-size: 7vw;
+  }
+
+  .separator {
+    font-size: 7vw;
+  }
 }
 
 .local-info {
-  font-size: 16px;
+  font-size: 3vw;
   color: #aaa;
   margin-top: 10px;
 }
