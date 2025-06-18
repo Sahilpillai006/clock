@@ -11,36 +11,28 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Share Tech Mono', monospace;
-  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .wrapper {
   text-align: center;
-  width: 100%;
 }
 
 .clock {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2vw;
-  margin-bottom: 2vh;
-  flex-wrap: nowrap;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .digit-container {
-  width: 12vw;
-  height: 12vw;
-  max-width: 80px;
-  max-height: 80px;
-  min-width: 40px;
-  min-height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 80%);
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  background: #1a1a1a;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
 }
 
 .numbers {
@@ -49,41 +41,25 @@ body {
   width: 100%;
   transition: transform 0.4s ease-in-out;
 }
+
 .numbers div {
-  height: 100%; /* Changed from 12vw or fixed px */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6vw;
-  max-font-size: 48px;
-  min-font-size: 20px;
+  height: 60px;
+  font-size: 42px;
   color: #fff;
-  text-shadow: 0 0 4px rgba(255,255,255,0.2);
+  text-align: center;
+  line-height: 60px;
 }
 
 .separator {
-  width: 4vw;
-  font-size: 6vw;
+  width: 12px;
+  font-size: 42px;
   color: #fff;
   text-align: center;
-  line-height: 12vw;
+  line-height: 60px;
 }
 
 .local-info {
-  font-size: 3vw;
+  font-size: 16px;
   color: #aaa;
   margin-top: 10px;
-}
-
-/* Mobile tweak */
-@media (max-width: 600px) {
-  .clock {
-    gap: 1vw;
-  }
-  .numbers div {
-    font-size: 7vw;
-  }
-  .separator {
-    font-size: 7vw;
-  }
 }
