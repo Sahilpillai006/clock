@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.digit-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #1a1a1a;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.numbers {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.numbers div {
+  height: 60px;
+  font-size: 42px;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+}
+
+.separator {
+  width: 12px;
+  font-size: 42px;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+}
+
+.local-info {
+  font-size: 16px;
+  color: #aaa;
+  margin-top: 10px;
+}

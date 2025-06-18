@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Midnight Slab Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="clock" id="clock">
+      <!-- HH -->
+      <div class="digit-container"><div class="numbers" id="d0"></div></div>
+      <div class="digit-container"><div class="numbers" id="d1"></div></div>
+
+      <!-- : -->
+      <div class="separator">:</div>
+
+      <!-- MM -->
+      <div class="digit-container"><div class="numbers" id="d2"></div></div>
+      <div class="digit-container"><div class="numbers" id="d3"></div></div>
+
+      <!-- : -->
+      <div class="separator">:</div>
+
+      <!-- SS -->
+      <div class="digit-container"><div class="numbers" id="d4"></div></div>
+      <div class="digit-container"><div class="numbers" id="d5"></div></div>
+    </div>
+
+    <div class="local-info">
+      <div id="readableTime"></div>
+      <div id="timezone"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
