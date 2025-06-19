@@ -3,38 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Scroll Clock</title>
+  <title>Scroll Clock with Alarm & Timer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="wrapper">
-    <div class="clock" id="clock">
-      <!-- HH -->
-      <div class="digit-container"><div class="numbers" id="d0"></div></div>
-      <div class="digit-container"><div class="numbers" id="d1"></div></div>
+<div class="wrapper">
+  <div class="clock" id="clock">
+    <div class="digit-container"><div class="numbers" id="d0"></div></div>
+    <div class="digit-container"><div class="numbers" id="d1"></div></div>
+    <div class="separator">:</div>
+    <div class="digit-container"><div class="numbers" id="d2"></div></div>
+    <div class="digit-container"><div class="numbers" id="d3"></div></div>
+    <div class="separator">:</div>
+    <div class="digit-container"><div class="numbers" id="d4"></div></div>
+    <div class="digit-container"><div class="numbers" id="d5"></div></div>
+  </div>
 
-      <!-- : -->
-      <div class="separator">:</div>
+  <div class="local-info">
+    <div id="readableTime"></div>
+    <div id="timezone"></div>
+  </div>
 
-      <!-- MM -->
-      <div class="digit-container"><div class="numbers" id="d2"></div></div>
-      <div class="digit-container"><div class="numbers" id="d3"></div></div>
-
-      <!-- : -->
-      <div class="separator">:</div>
-
-      <!-- SS -->
-      <div class="digit-container"><div class="numbers" id="d4"></div></div>
-      <div class="digit-container"><div class="numbers" id="d5"></div></div>
+  <div class="controls">
+    <div class="alarm-section">
+      <label>Alarm:</label>
+      <select id="alarmHour" class="select"></select> :
+      <select id="alarmMinute" class="select"></select>
+      <button id="setAlarmBtn">Set Alarm</button>
     </div>
 
-    <div class="local-info">
-      <div id="readableTime"></div>
-      <div id="timezone"></div>
+    <div class="timer-section">
+      <label>Timer:</label>
+      <select id="timerSelect" class="select"></select> minutes
+      <button id="startTimerBtn">Start Timer</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <button id="stopAlarmBtn" style="display: none;">Stop Alarm</button>
+  <button id="stopTimerBtn" style="display: none;">Stop Timer</button>
+
+  <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
